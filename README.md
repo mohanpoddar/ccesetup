@@ -16,8 +16,11 @@ An in-depth paragraph about your project and overview of use.
 ### Installing
 
 * Open URL in Firefox browser: https://github.com/mohanpoddar/ccesetup
-* Go to Code from top menu -> Expand Code under the Code -> Click on Download ZIP -> Wait for download to be completed.
-* Once Download completed -> Go to folder where code https://github.com/mohanpoddar/ccesetup is downloaded -> You will see a zip file named ccesetup-main.zip -> right click and then click extract here -> A new folder ccesetup-main will be created -> Right click new folder ccesetup-main -> Open in Terminal -> This will directly opnen your ccesetup-main director in command line terminal
+* Go to Code from top menu
+- Expand Code under the Code
+- Click on Download ZIP
+- Wait for download to be completed
+* Once Download completed -> Go to folder where code https://github.com/mohanpoddar/ccesetup is downloaded -> You will see a zip file named ccesetup-main.zip -> right click and then click extract here -> A new folder ccesetup-main will be created -> Right click new folder ccesetup-main -> Open in Terminal -> This will directly open your ccesetup-main directory in command line terminal.
 
 ### Executing program
 
