@@ -29,14 +29,14 @@ An in-depth paragraph about your project and overview of use.
 ### Executing program
 
 * How to run the program
-* Step-by-step bullets
+* List contents
 ```
-$ ls
+ls
 cce-setup.sh 
 ```
-
+* Now run the programme
 ```
-$ sudo bash cce-setup.sh -u devopsadmin -o cce 
+sudo bash cce-setup.sh -u devopsadmin -o cce 
 ```
 
 
