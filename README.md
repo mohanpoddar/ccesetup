@@ -1,24 +1,61 @@
-# ccesetup
+# Project Title
 
-Step-01: Download 
-Open URL in Firefox browser: https://github.com/mohanpoddar/ccesetup
+Simple overview of use/purpose of cce-setup.sh.
 
-- Go to Code from top menu -> Expand Code under the Code -> Click on Download ZIP -> Wait for download to be completed.
+## Description
 
-- Once Download completed -> Go to folder where code https://github.com/mohanpoddar/ccesetup is downloaded -> You will see a zip file named ccesetup-main.zip -> right click and then click extract here -> A new folder ccesetup-main will be created -> Right click new folder ccesetup-main -> Open in Terminal -> This will directly opnen your ccesetup-main director in command line terminal
+An in-depth paragraph about your project and overview of use.
 
-Now follow the next step 
- 
+## Getting Started
 
-Step-02: List the script
+### Dependencies
+
+* Ubuntu must be installed
+* ex. Ubuntu 22.04
+
+### Installing
+
+* Open URL in Firefox browser: https://github.com/mohanpoddar/ccesetup
+* Go to Code from top menu -> Expand Code under the Code -> Click on Download ZIP -> Wait for download to be completed.
+* Once Download completed -> Go to folder where code https://github.com/mohanpoddar/ccesetup is downloaded -> You will see a zip file named ccesetup-main.zip -> right click and then click extract here -> A new folder ccesetup-main will be created -> Right click new folder ccesetup-main -> Open in Terminal -> This will directly opnen your ccesetup-main director in command line terminal
+
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
 $ ls
 cce-setup.sh 
+```
 
-Step-03: Run below command from root.
-o - For original user while creating the os
-u - creating new user ex. devopsadmin
+```
+$ sudo bash cce-setup.sh -u devopsadmin -o cce 
+```
 
-Run below command with your system default user created at build time
-$ sudo bash cce-setup.sh -u devopsadmin -o cce
 
-Step-04: Take final reboot if not rebooted already
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+Mohan Poddar
+
+## Version History
+
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [DomPizzie](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
