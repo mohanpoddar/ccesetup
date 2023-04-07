@@ -31,7 +31,7 @@ An in-depth paragraph about your project and overview of use.
 * How to run the program
 * List contents
 ```
-ls
+$ ls
 cce-setup.sh 
 ```
 * Now run the programme
