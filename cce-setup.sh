@@ -14,7 +14,7 @@ tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
 
 echo $tmp_dir
 
-apt install git
+apt install git -y
 
 git clone https://github.com/mohanpoddar/cce.git $tmp_dir
 
