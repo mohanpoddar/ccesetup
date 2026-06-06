@@ -36,7 +36,7 @@ cce-setup.sh
 ```
 * Now run the programme
 ```
-sudo bash cce-setup.sh -u devopsadmin -o cce 
+sudo bash cce-setup.sh -u devopsadmin -o cce | tee /var/tmp/server_config_initial.txt
 ```
 
 
