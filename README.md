@@ -11,7 +11,7 @@ An in-depth paragraph about your project and overview of use.
 ### Dependencies
 
 * Ubuntu must be installed
-* ex. Ubuntu 22.04
+* ex. Ubuntu 24.04
 
 ### Installing
 
