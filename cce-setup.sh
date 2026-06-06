@@ -25,7 +25,7 @@ sleep 1
 cd $tmp_dir
 ls $tmp_dir
 
-bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername | tee /var/tmp/server_config_01.txt
+bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername | tee /var/tmp/server_config_main.txt
 
 rm -rf $tmp_dir
 
