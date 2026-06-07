@@ -10,7 +10,12 @@ do
     esac
 done
 
-tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
+# tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
+tmp_dir='/var/tmp/repo'
+echo -e "Creating Temporary Directory"
+mkdir -p $tmp_dir
+echo -e ""Check directory Created
+ls -ld $tmp_dir
 
 echo $tmp_dir
 
