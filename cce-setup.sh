@@ -22,7 +22,7 @@ echo $tmp_dir
 
 apt install git -y
 
-git clone https://github.com/mohanpoddar/cce.git $tmp_dir
+git clone -b ccedev01 https://github.com/mohanpoddar/cce.git $tmp_dir
 
 echo -e "\nSystemuser : $orgusername"
 sleep 1
