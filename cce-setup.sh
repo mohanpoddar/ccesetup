@@ -1,12 +1,13 @@
 #!/bin/bash
 
-while getopts h:o:u: option
-do 
+while getopts h:o:u:s: option
+do
     case "${option}"
         in
         h)hostname=${OPTARG};;
         o)orgusername=${OPTARG};;
         u)username=${OPTARG};;
+        s)live_samba_server_status=${OPTARG};;
     esac
 done
 
@@ -27,10 +28,12 @@ echo -e "\nSystemuser : $orgusername"
 sleep 1
 echo -e "Admin User : $username\n"
 sleep 1
+echo -e "Live Samba Server Status : $live_samba_server_status\n"
+sleep 1
 cd $tmp_dir
 ls $tmp_dir
 
-bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername | tee /var/tmp/server_config_main.txt
+bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername -s $live_samba_server_status | tee /var/tmp/server_config_main.txt
 
 rm -rf $tmp_dir
 

@@ -34,11 +34,17 @@ An in-depth paragraph about your project and overview of use.
 $ ls
 cce-setup.sh 
 ```
-* Now run the programme
+Now run the programme
+
+* For Samba Live Server
 ```
-sudo bash cce-setup.sh -u devopsadmin -o cce | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
 ```
 
+* For Samba Backup Server
+```
+sudo bash cce-setup.sh -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
+```
 
 ## Help
 
