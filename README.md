@@ -29,6 +29,8 @@ An in-depth paragraph about your project and overview of use.
 ### Executing program
 
 * How to run the program
+* Follow below instruction to setup your Live and Backup Data server.
+
 * List contents
 ```
 $ ls
@@ -36,12 +38,12 @@ cce-setup.sh
 ```
 Now run the programme
 
-* For Samba Live Server
+* Live Server: For Samba Live Data Server
 ```
 sudo bash cce-setup.sh -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
 ```
 
-* For Samba Backup Server
+* Backup Server: For Samba Backup Data Server
 ```
 sudo bash cce-setup.sh -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
 ```
