@@ -48,7 +48,7 @@ sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true | tee /var/tmp/se
 
 * PROD Live Server: Clone a specific branch 
 ```
-sudo bash cce-setup.sh -b ccedev01 -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
 ```
 
 DR Server: For Samba DR Data Server
@@ -60,7 +60,7 @@ sudo bash cce-setup.sh -u devopsadmin -o cce -s false | tee /var/tmp/server_conf
 
 * DR Server: Clone a specific branch 
 ```
-sudo bash cce-setup.sh -b ccedev01 -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
 ```
 
 ## Help
