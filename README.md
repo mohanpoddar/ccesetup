@@ -43,24 +43,24 @@ PROD Server: For Samba Live Data Server
 
 * PROD Live Server: Clone master branch
 ```
-sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 * PROD Live Server: Clone a specific branch 
 ```
-sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s true -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 DR Server: For Samba DR Data Server
 
 * DR Server: Clone master branch
 ```
-sudo bash cce-setup.sh -u master -o cce -s false | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -u devopsadmin -o cce -s false -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 * DR Server: Clone a specific branch 
 ```
-sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s false -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 ## Help

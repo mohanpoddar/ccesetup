@@ -1,8 +1,9 @@
 #!/bin/bash
 
 branch_name="master"
+ip_address=""
 
-while getopts h:o:u:s:b: option
+while getopts h:o:u:s:b:i: option
 do
     case "${option}"
         in
@@ -11,6 +12,7 @@ do
         u)username=${OPTARG};;
         s)live_samba_server_status=${OPTARG};;
         b)branch_name=${OPTARG};;
+        i)ip_address=${OPTARG};;
     esac
 done
 
@@ -33,10 +35,17 @@ echo -e "Admin User : $username\n"
 sleep 1
 echo -e "Live Samba Server Status : $live_samba_server_status\n"
 sleep 1
+if [ -n "$ip_address" ]; then
+    echo -e "IP Address : $ip_address\n"
+fi
 cd $tmp_dir
 ls $tmp_dir
 
-bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername -s $live_samba_server_status | tee /var/tmp/server_config_main.txt
+if [ -n "$ip_address" ]; then
+    bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername -s $live_samba_server_status -i "$ip_address" | tee /var/tmp/server_config_main.txt
+else
+    bash $tmp_dir/ansible-ubuntu-setup.sh -u $username -o $orgusername -s $live_samba_server_status | tee /var/tmp/server_config_main.txt
+fi
 
 rm -rf $tmp_dir
 
