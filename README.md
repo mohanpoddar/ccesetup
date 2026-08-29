@@ -29,16 +29,39 @@ An in-depth paragraph about your project and overview of use.
 ### Executing program
 
 * How to run the program
+* Follow below instruction to setup your Live and Backup Data server.
+
 * List contents
 ```
 $ ls
 cce-setup.sh 
 ```
-* Now run the programme
+
+Use the script to clone the repository branch needed for setup. If no branch is specified, it defaults to the `master` branch.
+
+PROD Server: For Samba Live Data Server
+
+* PROD Live Server: Clone master branch
 ```
-sudo bash cce-setup.sh -u devopsadmin -o cce | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
 ```
 
+* PROD Live Server: Clone a specific branch 
+```
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
+```
+
+DR Server: For Samba DR Data Server
+
+* DR Server: Clone master branch
+```
+sudo bash cce-setup.sh -u master -o cce -s false | tee /var/tmp/server_config_initial.txt
+```
+
+* DR Server: Clone a specific branch 
+```
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
+```
 
 ## Help
 
