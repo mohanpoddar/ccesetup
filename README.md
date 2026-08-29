@@ -39,28 +39,26 @@ cce-setup.sh
 
 Use the script to clone the repository branch needed for setup. If no branch is specified, it defaults to the `master` branch.
 
-* Clone default branch (`master`)
-```
-sudo bash cce-setup.sh -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
-```
-PROD Server:
+PROD Server: For Samba Live Data Server
 
-* Live Server: For Samba Live Data Server
+* PROD Live Server: Clone master branch
 ```
 sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
 ```
 
-* Clone a specific branch
+* PROD Live Server: Clone a specific branch 
 ```
 sudo bash cce-setup.sh -b ccedev01 -u devopsadmin -o cce -s true | tee /var/tmp/server_config_initial.txt
 ```
 
-* DR Server: For Samba DR Data Server (default `master`)
+DR Server: For Samba DR Data Server
+
+* DR Server: Clone master branch
 ```
 sudo bash cce-setup.sh -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
 ```
 
-* DR Server: For Samba DR Data Server with a specific branch
+* DR Server: Clone a specific branch 
 ```
 sudo bash cce-setup.sh -b ccedev01 -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
 ```
