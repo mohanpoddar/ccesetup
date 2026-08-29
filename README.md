@@ -55,7 +55,7 @@ DR Server: For Samba DR Data Server
 
 * DR Server: Clone master branch
 ```
-sudo bash cce-setup.sh -u devopsadmin -o cce -s false | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -u master -o cce -s false | tee /var/tmp/server_config_initial.txt
 ```
 
 * DR Server: Clone a specific branch 
