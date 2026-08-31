@@ -4,6 +4,7 @@ When running Ansible as root, configure the vault password environment like this
 ```bash
 sudo -i
 echo 'export ANSIBLE_VAULT_PASSWORD_FILE=~/.ansible_vault_pass' >> ~/.bashrc
+echo 'export EMAIL_PASSWORD=xxxxxxxxxxxx' >> ~/.bashrc
 source ~/.bashrc
 ```
 
