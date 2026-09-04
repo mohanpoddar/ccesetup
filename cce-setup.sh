@@ -50,4 +50,4 @@ fi
 rm -rf $tmp_dir
 
 echo -e "Taking final reboot"
-#reboot
+reboot
