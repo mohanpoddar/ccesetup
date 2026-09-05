@@ -43,24 +43,35 @@ PROD Server: For Samba Live Data Server
 
 * PROD Live Server: Clone master branch
 ```
-sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true -i <ip_address> | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s true -e prod -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 * PROD Live Server: Clone a specific branch 
 ```
-sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s true -i <ip_address> | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s true -e prod -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 DR Server: For Samba DR Data Server
 
 * DR Server: Clone master branch
 ```
-sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s false -i <ip_address> | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b master -u devopsadmin -o cce -s false -e dr -i <ip_address> | tee /var/tmp/server_config_initial.txt
 ```
 
 * DR Server: Clone a specific branch 
 ```
-sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s false -i <ip_address> | tee /var/tmp/server_config_initial.txt
+sudo bash cce-setup.sh -b development -u devopsadmin -o cce -s false -e dr -i <ip_address> | tee /var/tmp/server_config_initial.txt
+```
+
+The `-e` option selects the target environment and accepts only:
+
+* `prod` for the production/live data server
+* `dr` for the disaster-recovery server
+
+Run without a valid environment to see the usage help:
+
+```
+sudo bash cce-setup.sh -e
 ```
 
 ## Help
