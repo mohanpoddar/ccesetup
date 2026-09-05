@@ -68,6 +68,8 @@ The `-e` option selects the target environment and accepts only:
 * `prod` for the production/live data server
 * `dr` for the disaster-recovery server
 
+The `-u`, `-o`, `-s`, and `-e` options are required. The command exits with usage help if any of these values is missing.
+
 Run without a valid environment to see the usage help:
 
 ```

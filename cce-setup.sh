@@ -31,6 +31,12 @@ do
     esac
 done
 
+if [[ -z "${username:-}" || -z "${orgusername:-}" || -z "${live_samba_server_status:-}" || -z "$environment" ]]; then
+    echo "Error: -u, -o, -s, and -e are required." >&2
+    usage >&2
+    exit 1
+fi
+
 if [[ "$environment" != "prod" && "$environment" != "dr" ]]; then
     echo "Error: -e must be either 'prod' or 'dr'." >&2
     usage >&2
